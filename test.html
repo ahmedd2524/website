@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Fetching</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Data Fetching</h1>
+
+  <div id="output"></div>
+
+  <script>
+    $(document).ready(function() {
+      $.ajax({
+        url: "https://8ixct1d30f.execute-api.us-east-1.amazonaws.com/serverless_lambda_stage/data_r",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+          var json = JSON.stringify(data, null, 2);
+          $("#output").html("<pre>" + json + "</pre>");
+        },
+        error: function(error) {
+          console.error(error);
+          $("#output").text("Error fetching data.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

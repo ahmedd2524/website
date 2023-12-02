@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Single-Page Website</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Single-Page Website</h1>
+
+  <form id="updateForm">
+    <label for="valve">Valve:</label>
+    <input type="textv" id="valve" name="valve" placeholder="Enter valve value">
+    <label for="switch">Switch:</label>
+    <input type="texts" id="switch" name="switch" placeholder="Enter switch value">
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <section id="dataSection">
+    <h2>Retrieved Data</h2>
+    <h4 id="valueHolder"></h4>
+    <pre id="dataOutput"></pre>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
